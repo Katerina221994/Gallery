@@ -16,9 +16,9 @@ class MainActivity : AppCompatActivity() {
         binding.button.setOnClickListener {
             val geoUriString = "google.streetview:cbll=59.939448,30.328264&cbp=1,99.56,,1,2.0&mz=19"
             val geoUri:Uri = Uri.parse(geoUriString)
-            val mapIntent = Intent(Intent.ACTION_VIEW,geoUri)
-            if(mapIntent.resolveActivity(packageManager) != null){
-                startActivity(mapIntent)
+            val mapInten = Intent(Intent.ACTION_VIEW,geoUri)
+            if(mapInten.resolveActivity(packageManager) != null){
+                startActivity(mapInten)
             }
         }
     }
